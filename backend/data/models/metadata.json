@@ -1,0 +1,25 @@
+{
+  "model_name": "IsolationForest_Aquaponics_Baseline",
+  "model_version": "1.0.0-prototype",
+  "algorithm": "IsolationForest",
+  "model_role": "Prototype Baseline",
+  "validation_status": "Prototype / baseline model. Requires validation and tuning against empirical ESP32 sensor logs before production reliance.",
+  "accuracy_claim": "Unsupported until real hardware deployment benchmark.",
+  "training_dataset_info": "Baseline synthetic normal aquaponics distribution (6,000 samples calibrated to typical aquaponics bounds)",
+  "features": [
+    "water_temperature",
+    "ph",
+    "air_temperature",
+    "humidity",
+    "water_level"
+  ],
+  "preprocessing_requirements": "Raw numeric floating point values (Celsius, pH units, %, %); bounded scaling via logistic transform on decision function",
+  "expected_input_format": {
+    "water_temperature": "float (\u00b0C)",
+    "ph": "float (0.0-14.0)",
+    "air_temperature": "float (\u00b0C)",
+    "humidity": "float (%RH)",
+    "water_level": "float (%)"
+  },
+  "created_at": "2026-09-27T00:00:00Z"
+}
